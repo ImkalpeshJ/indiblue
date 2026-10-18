@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Products Catalogue & Facilities – INDIBLUE SOLUTIONS LLP</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/favicon.png">
+  
+  <!-- Modern Fonts: Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body id="top">
+
+  <!-- Ambient Glass Background Glows -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <!-- TOP UTILITY BAR (Phone, Email, GST, PAN) -->
+  <aside class="top-util-strip" aria-label="Official Contact and Registration">
+    <div class="top-util-inner">
+      <div class="util-left">
+        <a href="tel:+919689311855" class="util-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>+91-9689 3118 55</span>
+        </a>
+        <a href="mailto:contact@indibluegroup.com" class="util-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+          <span>contact@indibluegroup.com</span>
+        </a>
+      </div>
+
+      <div class="util-right">
+        <div class="util-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m19 21-7-4-7 4V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v16z"/></svg>
+          <span>GST : <strong class="util-bold">27BYJPG1626G1ZK</strong></span>
+        </div>
+        <div class="util-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+          <span>PAN : <strong class="util-bold">BYJPG1626G</strong></span>
+        </div>
+      </div>
+    </div>
+  </aside>
+
+  <!-- FLOATING NAVBAR (Coditas-Style 3-Part Glassmorphic Layout) -->
+  <header class="floating-navbar-wrapper">
+    <div class="floating-navbar-container">
+      
+      <!-- 1. Left: Official Logo Pill -->
+      <a href="index.html" class="logo-pill" aria-label="IndiBlue Solutions LLP Homepage">
+        <picture>
+          <source media="(max-width: 640px)" srcset="assets/images/logo-icon.png">
+          <img src="assets/images/logo-primary.png" alt="IndiBlue Solutions LLP" class="official-logo-img">
+        </picture>
+      </a>
+
+      <!-- 2. Center: Frosted Glass Navigation Pill -->
+      <nav class="center-nav-pill" aria-label="Primary Navigation">
+        <ul class="nav-links-list">
+          <li>
+            <a href="about-us.html" class="nav-link-item">
+              <span class="FlipText_flipText__awbnF">
+                <span>About Us</span>
+                <span aria-hidden="true">About Us</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="#top" class="nav-link-item active">
+              <span class="FlipText_flipText__awbnF">
+                <span>Products</span>
+                <span aria-hidden="true">Products</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="certificates.html" class="nav-link-item">
+              <span class="FlipText_flipText__awbnF">
+                <span>Certificates</span>
+                <span aria-hidden="true">Certificates</span>
+              </span>
+            </a>
+          </li>
+          <li>
+            <a href="index.html#contact" class="nav-link-item">
+              <span class="FlipText_flipText__awbnF">
+                <span>Contact Us</span>
+                <span aria-hidden="true">Contact Us</span>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- 3. Right: "Let's Talk!" Action Pill & Mobile Toggle -->
+      <div class="navbar-right-group">
+        <a href="tel:+919689311855" class="lets-talk-pill">
+          <span class="FlipText_flipText__awbnF">
+            <span>Let's Talk!</span>
+            <span aria-hidden="true">Let's Talk!</span>
+          </span>
+        </a>
+        <button class="mobile-hamburger-btn" id="mobileMenuBtn" aria-label="Open mobile menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div>
+
+    <!-- Mobile Drawer for smaller devices -->
+    <div class="mobile-drawer-glass" id="mobileDropdown">
+      <nav class="mobile-drawer-nav" aria-label="Mobile Navigation">
+        <a href="about-us.html" class="mobile-link">About Us</a>
+        <a href="#top" class="mobile-link active">Products & Facilities</a>
+        <a href="certificates.html" class="mobile-link">Certificates</a>
+        <a href="index.html#contact" class="mobile-link">Contact Us</a>
+      </nav>
+      <div class="mobile-drawer-divider"></div>
+      <div class="mobile-drawer-actions">
+        <a href="tel:+919689311855" class="mobile-drawer-call-btn">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>Call: +91-9689 3118 55</span>
+        </a>
+        <div class="mobile-drawer-meta">
+          <span>GeM Authorized</span>
+          <span class="meta-dot">•</span>
+          <span>MSME Registered</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO BANNER: Same Architectural Glass Banner as About Us -->
+  <section class="hero-banner">
+    <div class="hero-image-backdrop">
+      <picture>
+        <source media="(max-width: 768px)" srcset="assets/images/banner-mobile.jpg">
+        <img src="assets/images/product-banner.avif" alt="IndiBlue Solutions architectural glass ribbon banner" class="hero-img" width="1920" height="768">
+      </picture>
+      <div class="hero-overlay-tint"></div>
+    </div>
+    
+    <div class="hero-content-wrap">
+      <h1 class="hero-title">Products & Facilities</h1>
+    </div>
+  </section>
+
+  <!-- PRODUCTS CATALOGUE WRAPPER -->
+  <main class="page-content-wrapper">
+    <div class="page-content-container">
+
+      <!-- Section Header with Official Quote Capsule -->
+      <section class="home-section-wrap" style="margin-bottom: 3.5rem;">
+        <header class="home-section-header">
+          <span class="section-pill">Verified OEM & Institutional Inventory</span>
+          <h2 class="home-section-title">Explore Our Range</h2>
+          
+          <div class="quote-banner-wrap">
+            <div class="quote-glass-capsule">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/></svg>
+              <span class="quote-text">Quality is remembered long after the price is forgotten</span>
+            </div>
+          </div>
+        </header>
+
+        <!-- 12-Product Catalogue Grid (Scraped from https://indibluegroup.com/facilities/#output) -->
+        <div class="products-grid products-catalogue-grid" id="productGridContainer">
+
+          <!-- 1. Cement Articles -->
+          <article class="product-card product-item-clickable" data-index="0">
+            <div class="product-img-box">
+              <img src="assets/images/products/cement-articles.webp" alt="Cement Articles" class="product-img" loading="lazy">
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Cement Articles</h3>
+              <p class="product-desc">
+                Specializing in manufacturing high-grade institutional cement products that enhance outdoor, institutional, and municipal spaces.
+              </p>
+              <button type="button" class="product-action-btn" aria-label="View info about Cement Articles">
+                <span>View Details</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- 2. Computer Accessories & Security -->
+          <article class="product-card product-item-clickable" data-index="1">
+            <div class="product-img-box">
+              <img src="assets/images/products/computer-accessories-security.png" alt="Computer Accessories & Security" class="product-img" loading="lazy">
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Computer Accessories & Security</h3>
+              <p class="product-desc">
+                Comprehensive corporate and government IT accessories portfolio ranging from high-precision peripherals to CCTV security setups.
+              </p>
+              <button type="button" class="product-action-btn" aria-label="View info about Computer Accessories & Security">
+                <span>View Details</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- 3. Electronics -->
+          <article class="product-card product-item-clickable" data-index="2">
+            <div class="product-img-box">
+              <img src="assets/images/products/electronics.jpg" alt="Electronics" class="product-img" loading="lazy">
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Electronics</h3>
+              <p class="product-desc">
+                Delivering top-tier institutional and commercial electronics including LED commercial display units, interactive flat panels, and AV setups.
+              </p>
+              <button type="button" class="product-action-btn" aria-label="View info about Electronics">
+                <span>View Details</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- 4. Gym Equipments -->
+          <article class="product-card product-item-clickable" data-index="3">
+            <div class="product-img-box">
+              <img src="assets/images/products/gym-equipments.jpg" alt="Gym Equipments" class="product-img" loading="lazy">
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Gym Equipments</h3>
+              <p class="product-desc">
+                Heavy-duty commercial and institutional gym equipment designed for corporate fitness centers, armed forces recreation rooms, and academies.
+              </p>
+              <button type="button" class="product-action-btn" aria-label="View info about Gym Equipments">
+                <span>View Details</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- 5. Hospital Needs -->
+          <article class="product-card product-item-clickable" data-index="4">
+            <div class="product-img-box">
+              <img src="assets/images/products/hospital-needs.jpg" alt="Hospital Needs" class="product-img" loading="lazy">
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Hospital Needs</h3>
+              <p class="product-desc">
+                Supporting healthcare institutions with certified hospital furniture, ICU electric beds, medical carts, wheelchairs, and sterilization units.
+              </p>
+              <button type="button" class="product-action-btn" aria-label="View info about Hospital Needs">
+                <span>View Details</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- 6. Indian Handicrafts -->
+          <article class="product-card product-item-clickable" data-index="5">
+            <div class="product-img-box">
+              <img src="assets/images/products/indian-handicrafts.jpg" alt="Indian Handicrafts" class="product-img" loading="lazy">
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Indian Handicrafts</h3>
+              <p class="product-desc">
+                Promoting authentic Indian craftsmanship with an exclusive line of handcrafted corporate mementos, brass artifacts, and carved wooden items.
+              </p>
+              <button type="button" class="product-action-btn" aria-label="View info about Indian Handicrafts">
+                <span>View Details</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- 7. Industrial Safety & Training Equipment -->
+          <article class="product-card product-item-clickable" data-index="6">
+            <div class="product-img-box">
+              <img src="assets/images/products/industrial-safety-training-equipment.jpg" alt="Industrial Safety & Training Equipment" class="product-img" loading="lazy">
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Industrial Safety & Training</h3>
+              <p class="product-desc">
+                Essential workplace occupational safety equipment and technical vocational training kits with certified fire safety apparatus and PPE.
+              </p>
+              <button type="button" class="product-action-btn" aria-label="View info about Industrial Safety & Training Equipment">
+                <span>View Details</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- 8. Landscaping & Office Interior -->
+          <article class="product-card product-item-clickable" data-index="7">
+            <div class="product-img-box">
+              <img src="assets/images/products/landscaping-office-interior.jpg" alt="Landscaping & Office Interior" class="product-img" loading="lazy">
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Landscaping & Interior</h3>
+              <p class="product-desc">
+                Turnkey architectural interior contracting and biophilic landscaping solutions featuring acoustic wall panels, green walls, and plants.
+              </p>
+              <button type="button" class="product-action-btn" aria-label="View info about Landscaping & Office Interior">
+                <span>View Details</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- 9. Office Solution -->
+          <article class="product-card product-item-clickable" data-index="8">
+            <div class="product-img-box">
+              <img src="assets/images/products/office-solution.jpg" alt="Office Solution" class="product-img" loading="lazy">
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Office Solution</h3>
+              <p class="product-desc">
+                End-to-end office supply solutions including magnetic presentation whiteboards, executive filing cabinets, and everyday consumables.
+              </p>
+              <button type="button" class="product-action-btn" aria-label="View info about Office Solution">
+                <span>View Details</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- 10. Plastic Gallery -->
+          <article class="product-card product-item-clickable" data-index="9">
+            <div class="product-img-box">
+              <img src="assets/images/products/plastic-gallery.jpg" alt="Plastic Gallery" class="product-img" loading="lazy">
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Plastic Gallery</h3>
+              <p class="product-desc">
+                High-density UV-stabilized polymer molded furniture including stackable auditorium chairs, cafeteria dining tables, and dustbins.
+              </p>
+              <button type="button" class="product-action-btn" aria-label="View info about Plastic Gallery">
+                <span>View Details</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- 11. Steel Material -->
+          <article class="product-card product-item-clickable" data-index="10">
+            <div class="product-img-box">
+              <img src="assets/images/products/steel-material.jpg" alt="Steel Material" class="product-img" loading="lazy">
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Steel Material</h3>
+              <p class="product-desc">
+                Industrial-grade CRCA steel storage and structural products including heavy-gauge almirahs, multi-door lockers, and mobile compactors.
+              </p>
+              <button type="button" class="product-action-btn" aria-label="View info about Steel Material">
+                <span>View Details</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
+              </button>
+            </div>
+          </article>
+
+          <!-- 12. Wooden Furniture -->
+          <article class="product-card product-item-clickable" data-index="11">
+            <div class="product-img-box">
+              <img src="assets/images/products/wooden-furniture.webp" alt="Wooden Furniture" class="product-img" loading="lazy">
+            </div>
+            <div class="product-body">
+              <h3 class="product-title">Wooden Furniture</h3>
+              <p class="product-desc">
+                Premium architectural grade wooden executive furniture featuring conference tables, solid-wood director desks, and modular workstations.
+              </p>
+              <button type="button" class="product-action-btn" aria-label="View info about Wooden Furniture">
+                <span>View Details</span>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m9 18 6-6-6-6"/></svg>
+              </button>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- CALL TO ACTION GLASS ISLAND -->
+      <section id="contact" class="callout-glass-card">
+        <div class="callout-info">
+          <span class="section-pill" style="color: #7dd3fc;">Direct Supply Assistance</span>
+          <h2 class="callout-title">Ready to Partner with IndiBlue Solutions?</h2>
+          <p class="callout-text">
+            Connect directly with our dedicated institutional supply managers for tender authorizations, bulk catalogue rates, or customized enterprise procurement.
+          </p>
+        </div>
+        
+        <div class="callout-actions">
+          <a href="tel:+919689311855" class="callout-btn-primary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <span>+91-9689 3118 55</span>
+          </a>
+          <a href="https://wa.me/919599568356" target="_blank" rel="noopener noreferrer" class="callout-btn-secondary">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.01 4.54-3.68 8.23-8.22 8.23zm4.52-6.17c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.98-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.84-.86 2.06 0 1.21.89 2.39 1.01 2.55.13.17 1.74 2.66 4.22 3.73.59.25 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.1-.23-.17-.48-.29z"/></svg>
+            <span>WhatsApp Us</span>
+          </a>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- PRODUCT DETAIL POPUP MODAL (Clean Glassmorphism) -->
+  <div class="product-modal-backdrop" id="productModal" aria-hidden="true" role="dialog" aria-modal="true" data-lenis-prevent>
+    <div class="product-modal-container" data-lenis-prevent>
+      <div class="product-modal-card" data-lenis-prevent>
+        <!-- Close Button -->
+        <button type="button" class="product-modal-close-btn" id="modalCloseBtn" aria-label="Close product details popup">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 6 6 18M6 6l12 12"/></svg>
+        </button>
+
+        <div class="product-modal-layout">
+          <!-- Modal Left: Product Preview Image -->
+          <div class="product-modal-media">
+            <div class="product-modal-img-wrap">
+              <img id="modalProductImg" src="" alt="Product Image" class="product-modal-img">
+            </div>
+            <div class="product-modal-badge">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <span>GeM & OEM Certified</span>
+            </div>
+          </div>
+
+          <!-- Modal Right: Product Information & Inquiries -->
+          <div class="product-modal-info">
+            <span class="section-pill" id="modalProductCategory">IndiBlue Catalogue</span>
+            <h2 class="product-modal-title" id="modalProductTitle">Product Title</h2>
+            <div class="product-modal-divider"></div>
+            
+            <p class="product-modal-description" id="modalProductDesc">Product detailed description text goes here.</p>
+
+            <div class="product-modal-features">
+              <div class="modal-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Direct GeM & Institutional Tenders</span>
+              </div>
+              <div class="modal-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Bulk Enterprise Supply & Delivery</span>
+              </div>
+              <div class="modal-feature-item">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                <span>Standard Warranty & Quality Compliance</span>
+              </div>
+            </div>
+
+            <!-- Modal Action Buttons -->
+            <div class="product-modal-actions">
+              <a id="modalWhatsappLink" href="https://wa.me/919599568356" target="_blank" rel="noopener noreferrer" class="hero-btn-primary modal-action-btn">
+                <svg viewBox="0 0 24 24" fill="currentColor" style="width: 17px; height: 17px; margin-right: 0.5rem;"><path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.01 4.54-3.68 8.23-8.22 8.23zm4.52-6.17c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.98-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.84-.86 2.06 0 1.21.89 2.39 1.01 2.55.13.17 1.74 2.66 4.22 3.73.59.25 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.1-.23-.17-.48-.29z"/></svg>
+                <span>Inquire on WhatsApp</span>
+              </a>
+              <a href="tel:+919689311855" class="product-action-btn modal-call-btn">
+                <span>Call Procurement: +91-9689 3118 55</span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SITE FOOTER: Floating Frosted Glass Island Over Full Background Video -->
+  <footer class="clean-footer">
+    
+    <!-- Full Background WebM Video Backdrop -->
+    <div class="footer-video-backdrop" aria-hidden="true">
+      <video class="footer-bg-video" autoplay loop muted playsinline poster="assets/videos/footer-bg-poster.jpg" disablepictureinpicture>
+        <source src="assets/videos/footer-bg.webm" type="video/webm">
+        <source src="assets/videos/footer-bg.mp4" type="video/mp4">
+      </video>
+      <div class="footer-video-overlay"></div>
+    </div>
+
+    <!-- Floating Frosted Glass Footer Island -->
+    <div class="footer-glass-island">
+      <div class="glass-light-accent"></div>
+      
+      <div class="clean-footer-container">
+        
+        <div class="clean-footer-cols">
+          
+          <!-- Col 1: COMPANY DETAILS -->
+          <div class="clean-col">
+            <h4 class="clean-col-title">COMPANY DETAILS</h4>
+            <a href="index.html" class="footer-logo-link" aria-label="IndiBlue Solutions LLP Homepage">
+              <img src="assets/images/logo-white.png" alt="IndiBlue Solutions LLP" class="clean-footer-logo">
+            </a>
+            <div class="clean-footer-copy">
+              <p>© 2026 IndiBlue Solutions LLP.</p>
+              <p>All rights reserved.</p>
+            </div>
+            <div class="clean-footer-sublinks">
+              <a href="https://indibluegroup.com/login/" class="sublink">Login</a>
+              <span class="sublink-sep">·</span>
+              <span class="sublink-text">PAN India</span>
+            </div>
+          </div>
+
+          <!-- Col 2: IMPORTANT LINKS -->
+          <div class="clean-col">
+            <h4 class="clean-col-title">IMPORTANT LINKS</h4>
+            <ul class="clean-link-list">
+              <li>
+                <a href="products.html">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="link-icon"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><circle cx="9" cy="9" r="2"/><path d="m21 15-3.086-3.086a2 2 0 0 0-2.828 0L6 21"/></svg>
+                  <span>Products</span>
+                </a>
+              </li>
+              <li>
+                <a href="certificates.html">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="link-icon"><rect width="20" height="15" x="2" y="7" rx="2" ry="2"/><polyline points="17 2 12 7 7 2"/></svg>
+                  <span>Certificates</span>
+                </a>
+              </li>
+              <li>
+                <a href="about-us.html">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="link-icon"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                  <span>About Company</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Col 3: CONTACT DETAILS -->
+          <div class="clean-col">
+            <h4 class="clean-col-title">CONTACT DETAILS</h4>
+            <ul class="clean-link-list">
+              <li>
+                <a href="tel:9599568356">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="link-icon"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+                  <span>9599568356</span>
+                </a>
+              </li>
+              <li>
+                <a href="tel:9689311855">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="link-icon"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                  <span>9689311855</span>
+                </a>
+              </li>
+              <li>
+                <a href="mailto:contact@indibluegroup.com">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="link-icon"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                  <span>contact@indibluegroup.com</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Col 4: SOCIAL MEDIA & GeM Logo -->
+          <div class="clean-col">
+            <h4 class="clean-col-title">SOCIAL MEDIA</h4>
+            <p class="clean-subtext">No Posts Found</p>
+            <div class="gem-logo-container">
+              <a href="https://gem.gov.in/" target="_blank" rel="noopener noreferrer" aria-label="Government e Marketplace (GeM)">
+                <img src="assets/images/gem-logo-darkbg.png" alt="GeM Government e Marketplace" class="gem-footer-logo">
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP BUTTON (Glassmorphic) -->
+  <aside class="whatsapp-floating-corner" aria-label="WhatsApp Contact">
+    <a href="https://wa.me/919599568356" target="_blank" rel="noopener noreferrer" class="whatsapp-glass-btn" aria-label="Chat on WhatsApp">
+      <svg viewBox="0 0 24 24" fill="#ffffff" class="wa-icon-svg">
+        <path d="M12.04 2c-5.46 0-9.91 4.45-9.91 9.91 0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm0 18.15c-1.48 0-2.93-.4-4.2-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.196 8.196 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.24-8.24 2.2 0 4.27.86 5.82 2.42a8.18 8.18 0 0 1 2.41 5.83c.01 4.54-3.68 8.23-8.22 8.23zm4.52-6.17c-.25-.12-1.47-.72-1.7-.81-.23-.08-.39-.12-.56.12-.17.25-.64.81-.79.98-.14.17-.29.19-.54.06-.25-.12-1.05-.39-2-1.23-.74-.66-1.24-1.47-1.39-1.72-.14-.25-.02-.38.11-.51.11-.11.25-.29.37-.43.13-.15.17-.25.25-.42.08-.17.04-.31-.02-.43-.06-.12-.56-1.35-.77-1.85-.2-.49-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.84-.86 2.06 0 1.21.89 2.39 1.01 2.55.13.17 1.74 2.66 4.22 3.73.59.25 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.08.14-1.18-.06-.1-.23-.17-.48-.29z"/>
+      </svg>
+    </a>
+  </aside>
+
+  <!-- Embedded Product Database & Logic -->
+  <script>
+    window.PRODUCTS_DATA = [
+      {
+        title: "Cement Articles",
+        img: "assets/images/products/cement-articles.webp",
+        category: "Infrastructure & Municipal",
+        desc: "Specializing in manufacturing high-grade institutional cement products that enhance outdoor, institutional, and municipal spaces. Our range includes durable reinforced concrete garden benches, designer planters, security boundary poles, and heavy-duty interlock paving blocks designed for high longevity."
+      },
+      {
+        title: "Computer Accessories & Security",
+        img: "assets/images/products/computer-accessories-security.png",
+        category: "Enterprise IT & Surveillance",
+        desc: "Comprehensive corporate and government IT accessories portfolio ranging from high-precision peripherals, ergonomic mechanical keyboards, high-capacity enterprise storage, biometric surveillance systems, and high-resolution CCTV security setups engineered for enterprise reliability."
+      },
+      {
+        title: "Electronics",
+        img: "assets/images/products/electronics.jpg",
+        category: "Commercial Audio-Visual",
+        desc: "Delivering top-tier institutional and commercial electronics including LED commercial display units, interactive flat panels, air conditioning systems, smart projectors, and audio-visual setups engineered for corporate boardrooms and government offices."
+      },
+      {
+        title: "Gym Equipments",
+        img: "assets/images/products/gym-equipments.jpg",
+        category: "Institutional Fitness",
+        desc: "Heavy-duty commercial and institutional gym equipment designed for corporate fitness centers, armed forces recreation rooms, police academies, and educational institutions. Features multi-station gyms, motorized treadmills, and ergonomic free weights."
+      },
+      {
+        title: "Hospital Needs",
+        img: "assets/images/products/hospital-needs.jpg",
+        category: "Healthcare & Medical Care",
+        desc: "Supporting healthcare institutions and medical colleges with certified hospital furniture, patient beds, ICU electric beds, medical examination carts, stainless steel IV poles, wheelchairs, and sterilization equipment meeting strict NABH standards."
+      },
+      {
+        title: "Indian Handicrafts",
+        img: "assets/images/products/indian-handicrafts.jpg",
+        category: "Corporate Gifting & Heritage",
+        desc: "Promoting authentic Indian craftsmanship with an exclusive line of handcrafted corporate mementos, brass artifacts, carved wooden presentation items, and traditional handcrafted mementos ideal for government felicitations and institutional gifting."
+      },
+      {
+        title: "Industrial Safety & Training Equipment",
+        img: "assets/images/products/industrial-safety-training-equipment.jpg",
+        category: "Occupational Safety & Training",
+        desc: "Essential workplace occupational safety equipment and technical vocational training kits. Certified fire safety apparatus, personal protective equipment (PPE), hazard management tools, and vocational demonstration gear from premier industrial brands."
+      },
+      {
+        title: "Landscaping & Office Interior",
+        img: "assets/images/products/landscaping-office-interior.jpg",
+        category: "Architectural Workspaces",
+        desc: "Turnkey architectural interior contracting and biophilic landscaping solutions. Features acoustic wall paneling, modular ergonomic office layouts, vertical living green walls, indoor decorative plants, and executive false ceiling installations."
+      },
+      {
+        title: "Office Solution",
+        img: "assets/images/products/office-solution.jpg",
+        category: "Office Consumables & Systems",
+        desc: "End-to-end office supply solutions including magnetic presentation whiteboards, executive filing cabinets, document shredders, laminators, curated stationery packs, and desktop accessories crafted for government and corporate procurement."
+      },
+      {
+        title: "Plastic Gallery",
+        img: "assets/images/products/plastic-gallery.jpg",
+        category: "High-Grade Polymers",
+        desc: "High-density UV-stabilized polymer molded furniture including stackable auditorium chairs, cafeteria dining tables, industrial storage crates, heavy-duty waste management dustbins, and institutional outdoor seating."
+      },
+      {
+        title: "Steel Material",
+        img: "assets/images/products/steel-material.jpg",
+        category: "Industrial Steel Storage",
+        desc: "Industrial-grade CRCA steel storage and structural products. Specializing in MS flats, heavy-gauge steel almirahs, multi-door personal lockers, mobile compactor storage systems, and industrial shelving compliant with BIS specifications."
+      },
+      {
+        title: "Wooden Furniture",
+        img: "assets/images/products/wooden-furniture.webp",
+        category: "Executive Wood Furnishings",
+        desc: "Premium architectural grade wooden executive furniture featuring conference tables, solid-wood director desks, ergonomic high-back task seating, and bespoke modular acoustic workstation clusters."
+      }
+    ];
+  </script>
+  <!-- Smooth Scroll (Lenis) -->
+  <script src="assets/js/lenis.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
