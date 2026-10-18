@@ -3,6 +3,43 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  // 0. Fluid Water Bubble Loader Animation
+  const sitePreloader = document.getElementById('sitePreloader');
+  const waterLiquid = document.getElementById('waterLiquid');
+  const waterBubbleLoader = document.querySelector('.water-bubble-loader');
+
+  if (sitePreloader && waterLiquid) {
+    // Start filling water smoothly
+    setTimeout(() => {
+      waterLiquid.style.height = '100%';
+    }, 120);
+
+    const finishLoading = () => {
+      if (waterBubbleLoader) {
+        waterBubbleLoader.classList.add('full');
+      }
+      setTimeout(() => {
+        sitePreloader.classList.add('loaded');
+        setTimeout(() => {
+          sitePreloader.style.display = 'none';
+        }, 550);
+      }, 350);
+    };
+
+    // Keep active for fluid water flow animation (minimum 1.6s)
+    const minAnimationTime = 1600;
+    const startTime = Date.now();
+
+    window.addEventListener('load', () => {
+      const elapsed = Date.now() - startTime;
+      const remaining = Math.max(0, minAnimationTime - elapsed);
+      setTimeout(finishLoading, remaining);
+    });
+
+    // Fallback safety timeout (maximum 3.5s)
+    setTimeout(finishLoading, 3500);
+  }
+
   // 1. Initialize Lenis Smooth Scroll
   if (typeof Lenis !== 'undefined') {
     const lenis = new Lenis({
