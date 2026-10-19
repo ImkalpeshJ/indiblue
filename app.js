@@ -274,6 +274,188 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  // Expert Areas Auto-Scrolling Carousel (3 Cards Visible, 2s Interval, Pause on Hover)
+  const expertWrapper = document.getElementById('expertCarouselWrapper');
+  const expertTrack = document.getElementById('expertCarouselTrack');
+  const expertPrevBtn = document.getElementById('expertPrevBtn');
+  const expertNextBtn = document.getElementById('expertNextBtn');
+  const expertDotsContainer = document.getElementById('expertCarouselDots');
+
+  if (expertWrapper && expertTrack) {
+    const cards = Array.from(expertTrack.querySelectorAll('.expert-carousel-card'));
+    let currentIndex = 0;
+    let autoPlayTimer = null;
+    const intervalTime = 2000; // 2 seconds auto-scroll interval
+
+    const getVisibleCardsCount = () => {
+      const width = window.innerWidth;
+      if (width <= 640) return 1;
+      if (width <= 1024) return 2;
+      return 3;
+    };
+
+    const getMaxIndex = () => {
+      const visible = getVisibleCardsCount();
+      return Math.max(0, cards.length - visible);
+    };
+
+    const createDots = () => {
+      if (!expertDotsContainer) return;
+      expertDotsContainer.innerHTML = '';
+      const maxIdx = getMaxIndex();
+      const dotCount = maxIdx + 1;
+
+      for (let i = 0; i < dotCount; i++) {
+        const dot = document.createElement('button');
+        dot.type = 'button';
+        dot.className = `expert-dot ${i === currentIndex ? 'active' : ''}`;
+        dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
+        dot.addEventListener('click', () => {
+          goToSlide(i);
+          resetAutoPlay();
+        });
+        expertDotsContainer.appendChild(dot);
+      }
+    };
+
+    const updateDots = () => {
+      if (!expertDotsContainer) return;
+      const dots = expertDotsContainer.querySelectorAll('.expert-dot');
+      dots.forEach((dot, idx) => {
+        dot.classList.toggle('active', idx === currentIndex);
+      });
+    };
+
+    const updateCarousel = (animate = true) => {
+      if (!cards.length) return;
+      const maxIdx = getMaxIndex();
+      if (currentIndex > maxIdx) currentIndex = 0;
+      if (currentIndex < 0) currentIndex = maxIdx;
+
+      const card = cards[0];
+      const cardRect = card.getBoundingClientRect();
+      const cardWidth = cardRect.width;
+
+      // Extract current flex gap between cards
+      const trackStyle = window.getComputedStyle(expertTrack);
+      const gapValue = parseFloat(trackStyle.gap) || 0;
+      const stepDistance = cardWidth + gapValue;
+      const offset = currentIndex * stepDistance;
+
+      expertTrack.style.transition = animate ? 'transform 600ms cubic-bezier(0.22, 1, 0.36, 1)' : 'none';
+      expertTrack.style.transform = `translateX(-${offset}px)`;
+
+      updateDots();
+    };
+
+    const goToSlide = (index) => {
+      currentIndex = index;
+      updateCarousel(true);
+    };
+
+    const nextSlide = () => {
+      const maxIdx = getMaxIndex();
+      currentIndex = currentIndex >= maxIdx ? 0 : currentIndex + 1;
+      updateCarousel(true);
+    };
+
+    const prevSlide = () => {
+      const maxIdx = getMaxIndex();
+      currentIndex = currentIndex <= 0 ? maxIdx : currentIndex - 1;
+      updateCarousel(true);
+    };
+
+    const startAutoPlay = () => {
+      stopAutoPlay();
+      autoPlayTimer = setInterval(nextSlide, intervalTime);
+    };
+
+    const stopAutoPlay = () => {
+      if (autoPlayTimer) {
+        clearInterval(autoPlayTimer);
+        autoPlayTimer = null;
+      }
+    };
+
+    const resetAutoPlay = () => {
+      stopAutoPlay();
+      startAutoPlay();
+    };
+
+    // Button event listeners
+    if (expertNextBtn) {
+      expertNextBtn.addEventListener('click', () => {
+        nextSlide();
+        resetAutoPlay();
+      });
+    }
+
+    if (expertPrevBtn) {
+      expertPrevBtn.addEventListener('click', () => {
+        prevSlide();
+        resetAutoPlay();
+      });
+    }
+
+    // Pause auto-scroll when hovered
+    expertWrapper.addEventListener('mouseenter', stopAutoPlay);
+    expertWrapper.addEventListener('mouseleave', startAutoPlay);
+    expertWrapper.addEventListener('pointerenter', stopAutoPlay);
+    expertWrapper.addEventListener('pointerleave', startAutoPlay);
+
+    // Pause on focus inside (for accessibility)
+    expertWrapper.addEventListener('focusin', stopAutoPlay);
+    expertWrapper.addEventListener('focusout', startAutoPlay);
+
+    // Touch & Swipe gestures for mobile / tablets
+    let touchStartX = 0;
+    let touchEndX = 0;
+    let isSwiping = false;
+
+    expertTrack.addEventListener('touchstart', (e) => {
+      stopAutoPlay();
+      touchStartX = e.touches[0].clientX;
+      isSwiping = true;
+    }, { passive: true });
+
+    expertTrack.addEventListener('touchmove', (e) => {
+      if (!isSwiping) return;
+      touchEndX = e.touches[0].clientX;
+    }, { passive: true });
+
+    expertTrack.addEventListener('touchend', () => {
+      if (!isSwiping) return;
+      const swipeThreshold = 45;
+      const diff = touchStartX - touchEndX;
+      if (touchEndX !== 0 && Math.abs(diff) > swipeThreshold) {
+        if (diff > 0) {
+          nextSlide();
+        } else {
+          prevSlide();
+        }
+      }
+      isSwiping = false;
+      touchStartX = 0;
+      touchEndX = 0;
+      startAutoPlay();
+    });
+
+    // Window resize handling (recalculate layout and dots count)
+    let resizeDebounce = null;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeDebounce);
+      resizeDebounce = setTimeout(() => {
+        createDots();
+        updateCarousel(false);
+      }, 150);
+    });
+
+    // Initial setup
+    createDots();
+    updateCarousel(false);
+    startAutoPlay();
+  }
 });
 
 
